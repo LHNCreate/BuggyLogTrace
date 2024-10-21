@@ -1,0 +1,8 @@
+@PACKAGE_INIT@
+
+include(CMakeFindDependencyMacro)
+# 自动查找 spdlog 依赖
+find_dependency(spdlog REQUIRED)
+
+# 包含导出的 BuggyLogTraceTargets 文件
+include("${CMAKE_CURRENT_LIST_DIR}/BuggyLogTraceTargets.cmake")
